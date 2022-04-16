@@ -1,4 +1,44 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #333 !important;
+    color: #0ef !important;
+    font-size: 1.1rem;
+}
+
+h1 {
+    font-size: 2.75em;
+    grid-area: header;
+    width: fit-content;
+    justify-self: center;
+}
+
+.addSpace {
+    margin: .75em;
+}
+
+form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.formContainer {
+    width: fit-content;
+    border: #0ef solid 3px;
+    grid-area: content;
+    justify-self: center;
+    text-align: center;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "content";
+}
+
+.content {
+    grid-area: content;
+    justify-self: center;
+    width: 60%;
 }
