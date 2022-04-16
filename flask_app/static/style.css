@@ -42,3 +42,18 @@ body {
     justify-self: center;
     width: 60%;
 }
+
+table, td {
+    border: #0ef solid 1px;
+    
+}
+
+th, td {
+    border-bottom: #0ef solid 2px;
+    padding: 8px;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #555;
+}
