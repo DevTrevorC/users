@@ -11,7 +11,8 @@
 <body>
     <h1>Edit user {{session['id']}}</h1>
     <div class="formContainer">
-        <form action="" method="POST">
+        <form action="/mode?mode=update" method="POST">
+            <input type="hidden" name="id" value="{{user['id']}}">
             <div class="addSpace">
                 <label for="firstName">First Name:</label>
                 <input id="firstName" type="text" name="firstName" value="{{user['first_name']}}">

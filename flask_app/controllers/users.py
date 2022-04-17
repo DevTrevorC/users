@@ -15,7 +15,6 @@ def addUser():
 @app.route('/edit')
 def editUser():
     user = User.get_user(session['id'])
-    print(user)
     return render_template('edit_user.html', user = user, session = session)
 
 @app.route('/show')
@@ -28,6 +27,16 @@ def chooseMode():
     session['id'] = request.args.get('id')
     if request.args.get('mode') == 'edit':
         return redirect('/edit')
+    elif request.args.get('mode') == 'update':
+        session['id'] = request.form['id']
+        data = {
+        "id": request.form["id"],
+        "firstName": request.form["firstName"],
+        "lastName" : request.form["lastName"],
+        "email" : request.form["email"]
+        }
+        User.edit_user(data)
+        return redirect('/show')
     else:
         return redirect('/show')
 
