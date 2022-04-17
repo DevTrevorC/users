@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>All Users</title>
     <link rel="stylesheet" href="/static/style.css">
     <!-- <link rel="stylesheet" type="text/css " href="..\static\style.css"> -->
     
@@ -23,6 +23,15 @@
                 </tr>
             </thead>
             <tbody>
+                {% for one_user in all_users %}
+                    <tr>
+                        <td>{{one_user.id}}</td>
+                        <td>{{one_user.first_name}} {{one_user.last_name}}</td>
+                        <td>{{one_user.email}}</td>
+                        <td>{{one_user.created_at}}</td>
+                        <td><a href="">Add</a> | <a href="">Edit</a> | <a href="">Delete</a></td>
+                    </tr>
+                {% endfor %}
             </tbody>
         </table>
         <a href="/add">Add a new user</a>
