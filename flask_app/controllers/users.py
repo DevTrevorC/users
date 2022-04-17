@@ -14,12 +14,13 @@ def addUser():
 
 @app.route('/edit')
 def editUser():
-    return render_template('edit_user.html', session = session)
+    user = User.get_user(session['id'])
+    print(user)
+    return render_template('edit_user.html', user = user, session = session)
 
 @app.route('/show')
 def showUser():
     user = User.get_user(session['id'])
-    print(user)
     return render_template('display_user.html', user = user, session = session)
 
 @app.route('/mode', methods=["POST", "GET"])

@@ -14,15 +14,15 @@
         <form action="" method="POST">
             <div class="addSpace">
                 <label for="firstName">First Name:</label>
-                <input id="firstName" type="text" name="firstName">
+                <input id="firstName" type="text" name="firstName" value="{{user['first_name']}}">
             </div>
             <div class="addSpace">
                 <label for="lastName">Last Name:</label>
-                <input id="lastName" type="text" name="lastName">
+                <input id="lastName" type="text" name="lastName" value="{{user['last_name']}}"> 
             </div>
             <div class="addSpace">
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email">
+                <input id="email" type="text" name="email" value="{{user['email']}}">
             </div>
             <div class="addSpace">
                 <input type="submit" value="Update">
