@@ -5,10 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Info</title>
-    <!-- <link rel="stylesheet" href="/static/style.css"> -->
-    <link rel="stylesheet" type="text/css " href="..\static\style.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- <link rel="stylesheet" type="text/css " href="..\static\style.css"> -->
 </head>
 <body>
-    
+    <h1>User {{session['id']}}</h1>
+    <div class="content notAsWide">
+        <table>
+            <tr><td>{{user['first_name']}} {{user['last_name']}}</td></tr>
+            <tr><td>{{user['email']}}</td></tr>
+            <tr><td>{{user['created_at']}}</td></tr>
+            <tr><td>{{user['updated_at']}}</td></tr>
+        </table>
+        <div>
+            <a href="/edit">Edit</a>
+            <a href="">Delete</a>
+        </div>
+    </div>
 </body>
 </html>

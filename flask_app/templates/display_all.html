@@ -29,7 +29,7 @@
                         <td>{{one_user.first_name}} {{one_user.last_name}}</td>
                         <td>{{one_user.email}}</td>
                         <td>{{one_user.created_at}}</td>
-                        <td><a href="">Add</a> | <a href="">Edit</a> | <a href="">Delete</a></td>
+                        <td><a href="/mode?id={{one_user.id}}">Show</a> | <a href="/mode?id={{one_user.id}}&mode=edit">Edit</a> | <a href="">Delete</a></td>
                     </tr>
                 {% endfor %}
             </tbody>
