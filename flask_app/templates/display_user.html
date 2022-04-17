@@ -18,8 +18,9 @@
             <tr><th>Updated:</th><td>{{user['updated_at']}}</td></tr>
         </table>
         <div>
+            <a href="/">Home</a>
             <a href="/edit">Edit</a>
-            <a href="">Delete</a>
+            <a href="/mode?id={{session['id']}}&mode=delete">Delete</a>
         </div>
     </div>
 </body>

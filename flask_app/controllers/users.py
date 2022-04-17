@@ -37,6 +37,9 @@ def chooseMode():
         }
         User.edit_user(data)
         return redirect('/show')
+    elif request.args.get('mode') == 'delete':
+        User.del_user(session['id'])
+        return redirect('/')
     else:
         return redirect('/show')
 
